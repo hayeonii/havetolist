@@ -6,7 +6,7 @@
 body {
     background-color: #130946;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 60px;
@@ -22,6 +22,34 @@ body {
     padding: 40px;
 }
 
+.login__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#name_input {
+    width: 100px;
+    height: 22px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
+
+#name_button {
+    border: none;
+    width: 50px;
+    height: 22px;
+    background-color: rgba(233, 233, 233, 0);
+    color: #ff438b;
+}
+
 .title {
     color: #ff438b;
     font-size: 24px;
@@ -31,10 +59,34 @@ body {
     padding-bottom: 15px;
 }
 
+ul {
+    padding: 0;
+    margin-left: 20px;
+    list-style: none;
+}
+
+.items {
+    height: 50%;
+}
+
+.item__delete {
+    outline: none;
+    background-color: white;
+    border: 0;
+    color: #ff438b;
+    transition: all 200ms ease-in;
+}
+
+.item__delete:hover {
+    color: #ff438b;
+    transform: scale(1.1);
+}
+
 .item__submit {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 20px;
 }
 .item__input {
     width: 90%;
@@ -52,4 +104,44 @@ body {
     border: 0;
     color: #ff438b;
     font-size: 18px;
+}
+
+.chanllenge__result {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 1px solid #6d686a;
+    padding-top: 15px;
+}
+
+.chanllenge__result button {
+    border: 0;
+    outline: none;
+    background-color: white;
+    text-align: center;
+    color: #ff438b;
+    font-size: 13px;
+    margin: 10px 10px;
+}
+
+.result__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ff438b;
+    font-size: 50px;
+}
+
+.clear, .fail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear__count, .fail__count {
+    color: #ff438b;
+    font-size: 20px;
+    font-weight: bold;
 }

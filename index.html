@@ -7,6 +7,8 @@
     <title>To do list</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./main.js" defer></script>
+    <script src="./result.js" defer></script>
+    <script src="./login.js" defer></script>
     <script src="https://kit.fontawesome.com/264d30fe09.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,14 +17,41 @@
             I have to ___ 
             <i class="fa-solid fa-pencil"></i>
         </header>
-        <ul class="items">practice</ul>
+
+        <div class="login__form">
+            <form class="hidden" id="login-form">
+                <span>My name is </span>
+                <input required type="text" id="name_input">
+                <input type="submit" value="Log-In" id="name_button">
+            </form>
+            <p class="hidden" id="greeting"></p>
+        </div>
+
+        <ul class="items"></ul>
+
         <footer class="footer">
             <form class="item__submit">
                 <input type="text" class="item__input">
-                <button class="input__icon">
+                <button type="submit" class="input__icon">
                     <i class="fa-solid fa-plus"></i>
                 </button>
             </form>
+            <div class="chanllenge__result">
+                <div class="clear">
+                    <div class="clear__count">0</div>
+                    <div class="result__icon">
+                        <i class="fa-solid fa-face-smile-wink"></i>
+                    </div>
+                    <button>CLEAR</button>
+                </div>
+                <div class="fail">
+                    <div class="fail__count">0</div>
+                    <div class="result__icon">
+                        <i class="fas fa-frown"></i>
+                    </div>
+                    <button>FAIL</button>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
