@@ -9,6 +9,7 @@
     <script src="./main.js" defer></script>
     <script src="./result.js" defer></script>
     <script src="./login.js" defer></script>
+    <script src="./dday.js" defer></script>
     <script src="https://kit.fontawesome.com/264d30fe09.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -25,6 +26,17 @@
                 <input type="submit" value="Log-In" id="name_button">
             </form>
             <p class="hidden" id="greeting"></p>
+        </div>
+
+        <div class="dday">
+            <span id="dday__title">D-Day</span>
+            <form class="dday__input">
+                <input type="text" placeholder="yyyy-mm-dd" class="date__input">
+                <button type="submit" class="date__submit">
+                    <i class="fas fa-check"></i>
+                </button>
+            </form>
+            <div class="dday__result"></div>
         </div>
 
         <ul class="items"></ul>
