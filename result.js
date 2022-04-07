@@ -3,8 +3,8 @@ const failBtn = document.querySelector('.fail button');
 const clearNumber = document.querySelector('.clear__count');
 const failNumber = document.querySelector('.fail__count');
 
-const count = "memoryCurrent";
-const failcount = "failMemory";
+let count = "memoryCurrent";
+let failcount = "failMemory";
 
 function clear(){
     const current = parseInt(clearNumber.innerText, 10);

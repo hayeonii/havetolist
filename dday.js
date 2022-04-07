@@ -1,15 +1,23 @@
-const ddayBtn = document.querySelector(".date__submit");
-const inputDay = document.querySelector(".date__input").value;
-const today = new Date();
-const startDay = new Date(inputDay);
+const ddayBtn = document.querySelector('.input__icon');
+const ddayForm = document.querySelector('.dday__input');
+const now = new Date();
 
-const year = startDay.getFullYear();
-const month = startDay.getMonth()+1;
-const day = startDay.getDate();
+ddayForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    dday();
+})
 
-function dday(){
-    document.querySelector(".dday__result").innerHTML = year + "년" + month + "월" + day + "일까지";
+function removeForm(){
+    const inputForm = document.querySelector('.dday__input');
+    inputForm.parentNode.removeChild(inputForm);
 }
 
+function dday(){
+    const dday = new Date(document.querySelector('.date__input').value);
+    const passedTime = now.getTime()-dday.getTime();
+    const passedDay = Math.round(passedTime/(24*60*60*1000));
+    document.querySelector('.dday__result').innerHTML = "시작한지 " + passedDay + "일째";
+    removeForm();
+}
 
-ddayBtn.addEventListener("submit", dday);
+ddayBtn.addEventListener('submit', dday);
